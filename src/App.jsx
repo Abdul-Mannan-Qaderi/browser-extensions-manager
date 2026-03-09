@@ -1,20 +1,11 @@
+import "./App.css";
+import Nav from "./components/Nav";
+
 function App() {
 	return (
-		<main className="">
-			DevLens Quickly inspect page layouts and visualize element boundaries.
-			Remove StyleSpy Instantly analyze and copy CSS from any webpage element.
-			Remove SpeedBoost Optimizes browser resource usage to accelerate page
-			loading. Remove JSONWizard Formats, validates, and prettifies JSON
-			responses in-browser. Remove TabMaster Pro Organizes browser tabs into
-			groups and sessions. Remove ViewportBuddy Simulates various screen
-			resolutions directly within the browser. Remove Markup Notes Enables
-			annotation and notes directly onto webpages for collaborative debugging.
-			Remove GridGuides Overlay customizable grids and alignment guides on any
-			webpage. Remove Palette Picker Instantly extracts color palettes from any
-			webpage. Remove LinkChecker Scans and highlights broken links on any page.
-			Remove DOM Snapshot Capture and export DOM structures quickly. Remove
-			ConsolePlus Enhanced developer console with advanced filtering and
-			logging. Remove
+		<main className="dark:bg-slate-900 dark:text-white relative p-6 bg-slate-200">
+			<Nav />
+			<div className=""></div>
 		</main>
 	);
 }
