@@ -1,22 +1,21 @@
-import extensionLogo from "../assets/images/logo.svg";
 import moon from "../assets/images/icon-moon.svg";
 import sun from "../assets/images/icon-sun.svg";
 
 import { useState, useEffect } from "react";
+import { useExtensions } from "../context/ExtensionContext";
 
 export default function TopNav() {
-	const [dark, setDark] = useState(false);
-
-	useEffect(() => {
-		if (dark) {
-			document.documentElement.classList.add("dark");
-		} else {
-			document.documentElement.classList.remove("dark");
-		}
-	}, [dark]);
-
+	const { dark, setDark } = useExtensions();
 	return (
-		<div className="flex justify-between items-center mb-4 bg-white px-3 py-2 rounded-xl border  border-Neutral-200 shadow-sm dark:bg-Neutral-800 dark:border-Neutral-800 transition duration-200">
+		<div
+			className="
+				md:mb-10
+				flex justify-between items-center mb-4 bg-white
+				px-3 py-2 rounded-xl
+				md:px-4 md:py-3 md:rounded-3xl
+				border  border-Neutral-200 shadow-sm
+			dark:bg-Neutral-800 dark:border-Neutral-800"
+		>
 			<div className="flex justify-start items-center gap-3">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -43,11 +42,11 @@ export default function TopNav() {
 			</div>
 			<button
 				onClick={() => setDark(!dark)}
-				className="h-12 px-4 py-2 rounded-xl
+				className="h-12 md:h-13 px-4 py-2 rounded-xl
 				 bg-Neutral-100 hover:bg-Neutral-300
 				 dark:hover:bg-Neutral-600 dark:bg-Neutral-700
 				focus-visible:ring-0
-				focus-visible:outline-1
+				focus-visible:outline-2
 				focus-visible:outline-offset-3
 				focus-visible:outline-Red-700
 				 cursor-pointer"
