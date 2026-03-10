@@ -43,7 +43,14 @@ export default function TopNav() {
 			</div>
 			<button
 				onClick={() => setDark(!dark)}
-				className="h-12 px-4 py-2 rounded-xl bg-Neutral-100 dark:bg-Neutral-700 transition cursor-pointer"
+				className="h-12 px-4 py-2 rounded-xl
+				 bg-Neutral-100 hover:bg-Neutral-300
+				 dark:hover:bg-Neutral-600 dark:bg-Neutral-700
+				focus-visible:ring-0
+				focus-visible:outline-1
+				focus-visible:outline-offset-3
+				focus-visible:outline-Red-700
+				 cursor-pointer"
 			>
 				<img
 					src={dark ? sun : moon}
